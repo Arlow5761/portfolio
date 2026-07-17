@@ -1,3 +1,51 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+
+/* Bloom palette — Tailwind v4 theme tokens
+   Import in src/app.css (after @import "tailwindcss")
+   or paste the @theme block into app.css directly. */
+
+@theme {
+	/* Pink family (brand) */
+	--color-pink-500: #ff74b1; /* primary: buttons, fills, hero bg, progress */
+	--color-pink-600: #e0468f; /* hover/pressed, pink text on white, prices */
+	--color-pink-300: #ffb4d5; /* navbar, tags, card bg, CTA banners */
+	--color-pink-100: #ffd3e6; /* pale cards, disabled, tracks */
+	--color-berry-600: #8f2a5c; /* text + icons on pink surfaces */
+	--color-berry-900: #5c1638; /* footer, dark buttons, headings on pink */
+
+	/* Blue family (secondary accent) */
+	--color-cyan-400: #65dbff; /* accent borders, icons, highlights */
+	--color-cyan-600: #0e7fb0; /* links, blue text on white */
+	--color-sky-200: #a6eaff; /* testimonial/feature cards, alt sections */
+	--color-sky-100: #e2f6ff; /* info alerts, lightest blue cards */
+	--color-sky-700: #0e6a94; /* text + icons on blue surfaces */
+	--color-sky-900: #0a5678; /* stronger text on blue surfaces */
+
+	/* Yellow family (attention — use sparingly) */
+	--color-sun-300: #ffeb76; /* badges, text highlights */
+	--color-sun-100: #fff6c9; /* warning alerts, lightest yellow cards */
+	--color-olive-600: #8a7212; /* text + icons on cream/yellow */
+	--color-olive-900: #5c4a08; /* text on saturated yellow */
+
+	/* Neutrals */
+	--color-ink-900: #2b2140; /* body text and headings */
+	--color-ink-600: #4a4160; /* secondary text */
+	--color-blush-50: #fff5f9; /* page background */
+	--color-dusty-400: #c98bab; /* placeholders, disabled labels */
+
+	/* Semantic (destructive actions only) */
+	--color-danger-600: #d63b3b;
+
+	/* Semantic aliases — use these in markup where possible,
+     so a future rebrand means editing one line here */
+	--color-brand: var(--color-pink-500);
+	--color-brand-hover: var(--color-pink-600);
+	--color-brand-soft: var(--color-pink-300);
+	--color-brand-faint: var(--color-pink-100);
+	--color-link: var(--color-cyan-600);
+	--color-highlight: var(--color-sun-300);
+	--color-body: var(--color-ink-900);
+	--color-page: var(--color-blush-50);
+}

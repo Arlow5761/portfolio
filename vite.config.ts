@@ -8,20 +8,20 @@ import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 
 const adapter = () => {
-  switch (process.env.BUILD_TARGET) {
-    case 'static':
-      return staticAdapter({
-        fallback: '404.html',
-      });
-    case 'vercel':
-      return vercelAdapter();
-    case 'netlify':
-      return netlifyAdapter();
-    case 'cloudflare':
-      return cloudflareAdapter();
-    default:
-      return autoAdapter();
-  }
+	switch (process.env.BUILD_TARGET) {
+		case 'static':
+			return staticAdapter({
+				fallback: '404.html'
+			});
+		case 'vercel':
+			return vercelAdapter();
+		case 'netlify':
+			return netlifyAdapter();
+		case 'cloudflare':
+			return cloudflareAdapter();
+		default:
+			return autoAdapter();
+	}
 };
 
 export default defineConfig({

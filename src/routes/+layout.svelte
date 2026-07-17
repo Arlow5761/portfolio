@@ -6,8 +6,8 @@
 </script>
 
 <svelte:head>
-    <link rel="icon" href={favicon} />
-    <title>Arlow5761 — Portfolio</title>
+	<link rel="icon" href={favicon} />
+	<title>Arlow5761 — Portfolio</title>
 </svelte:head>
 
 {@render children()}
